@@ -19,10 +19,10 @@ def estimator(data):
     if my_input_data["periodType"] == "days":
       coverted_days = my_input_data["timeToElapse"]
 
-    if my_input_data["periodType"] == "weeks":
+    elif my_input_data["periodType"] == "weeks":
       coverted_days = my_input_data["timeToElapse"] * 7
 
-    if my_input_data["periodType"] == "weeks":
+    elif my_input_data["periodType"] == "weeks":
       coverted_days = my_input_data["timeToElapse"] * 30
 
       return coverted_days 
