@@ -15,14 +15,14 @@ def estimator(data):
     totalHospitalBeds: 1380614
     }
 
-  def covert_to_days():
+  def convert_to_days():
     if my_input_data["periodType"] == "days":
       coverted_days = my_input_data["timeToElapse"]
 
     if my_input_data["periodType"] == "weeks":
       coverted_days = my_input_data["timeToElapse"] * 7
 
-    if my_input_data["periodType"] == "weeks":
+    if my_input_data["periodType"] == "months":
       coverted_days = my_input_data["timeToElapse"] * 30
 
       return coverted_days 
@@ -36,7 +36,7 @@ def estimator(data):
           },
     "severeImpact" : {
     "currentlyInfected" : my_input_data["reportedCases"] * 50,
-    "infectedByRequestedTime" : (my_input_data["reportedCases"] * 10) * (2 ** (converted_to_days()/3))
+    "infectedByRequestedTime" : (my_input_data["reportedCases"] * 10) * (2 ** (convert_to_days()/3))
   
     }
   } 
